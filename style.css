@@ -1,0 +1,108 @@
+/* =================
+  WRITE YOUR CSS HERE.
+  Check the ⌄ for help with formatting and validating your code.
+  You must write some CSS to complete this challenge.
+   ===================
+*/
+
+
+html,
+
+
+.one{
+  color:#CD6155;
+  font-size: 0.9em;
+}
+body{
+  background-color:#212F3D;
+}
+
+header{
+  background:#D0ECE7;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.99em
+ }
+.one{
+  position: fixed;
+ }
+ 
+.logo{
+  font-size: 1.4em;
+  text-decoration: none;
+  font-weigth: 700;
+  color: #3a6cf4
+}
+
+.navigation a{
+  color:#3a6cf4;
+  text-decoration: none;
+  font-size: 1em;
+  font-weigth: 500;
+  font-bold: 90px;
+  padding-right: 40px;
+}
+.navigation a:hover{
+  color: #601c
+}
+
+.main{
+  padding: 50px 40px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background: url(https://c4.wallpaperflare.com/wallpaper/834/602/559/computer-keyboards-wallpaper-preview.jpg) no-repeat ;
+  background: cover;
+  background-position: cover cover;
+  background-attachment: fixed;
+ }
+.main h2{
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 100px;
+}
+.main h2 span{
+  font-size: 2em;
+  color: #3498DB;
+}
+.main h3{
+ font-size: 1.4em;
+ margin-bottom: 30px
+}
+.main-btn{
+  color: #fff;
+  background-color: #3a6cf4;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: 700;
+  display: inline-block;
+  padding: 0.90em 0.90em;
+  letter-spacing: 1px;
+  border-radius: 98px;
+  margin-bottom: 20px;
+  transition: 0.7s ease;
+}
+.main-btn:hover {
+  background-color: #1F618D;
+  transform: scale(1.1);
+}
+.social-icons a{
+  color: #fff;
+  text-decoration:none;
+  font-size: 1.7em;
+  padding-right: 15px;
+}
+h1{
+  color: #fff;
+  justify-content: center;
+}
+p{
+  color: #3498DB;
+  font-size: 1.1em;
+  justify-content: center;
+  
+}
