@@ -34,10 +34,11 @@ document.getElementById('next').addEventListener('click', (event) => {
 
 });
 
+
 var images;
 
 
-images = ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Juvenile_Ragdoll.jpg/1024px-Juvenile_Ragdoll.jpg', 'https://www.treehugger.com/thmb/VqzSdaokskZ4vx_UuTsYVIOW5lo=/500x0/filters:no_upscale():max_bytes(150000):strip_icc():gifv():format(webp)/GettyImages-593450425-5176c57c7b77417f9dd01dfb43827e7b.jpg', 'https://static.scientificamerican.com/sciam/cache/file/D69F2383-F1B7-48F2-B9E02CADEF218122_source.jpg?w=590&h=800&F42B1AB9-E458-4B17-B837A55D113411EE'];
+images = ['https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ba/29/5c/img-worlds-of-adventure.jpg?w=2400&h=-1&s=1', 'https://cdn.britannica.com/91/181391-050-1DA18304/cat-toes-paw-number-paws-tiger-tabby.jpg', 'https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg'];
 let element_carousel = document.getElementById('carousel');
 element_carousel.setAttribute("src", images[0]);
 
