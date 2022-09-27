@@ -34,3 +34,34 @@ document.getElementById('next').addEventListener('click', (event) => {
 
 });
 
+var images;
+
+
+images = ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Juvenile_Ragdoll.jpg/1024px-Juvenile_Ragdoll.jpg', 'https://www.treehugger.com/thmb/VqzSdaokskZ4vx_UuTsYVIOW5lo=/500x0/filters:no_upscale():max_bytes(150000):strip_icc():gifv():format(webp)/GettyImages-593450425-5176c57c7b77417f9dd01dfb43827e7b.jpg', 'https://static.scientificamerican.com/sciam/cache/file/D69F2383-F1B7-48F2-B9E02CADEF218122_source.jpg?w=590&h=800&F42B1AB9-E458-4B17-B837A55D113411EE'];
+let element_carousel = document.getElementById('carousel');
+element_carousel.setAttribute("src", images[0]);
+
+
+document.getElementById('previous_button').addEventListener('click', (event) => {
+  let element_carousel2 = document.getElementById('carousel');
+  images.unshift(images.pop());
+  element_carousel2.setAttribute("src", images[0]);
+
+});
+
+document.getElementById('previous_button').addEventListener('click', (event) => {
+  let element_image = document.getElementById('image');
+  let new_img = document.createElement('img');
+  images.unshift(images.pop());
+  new_img.setAttribute("src", images[0]);
+
+  element_image.appendChild(new_img);
+
+});
+
+document.getElementById('next_button').addEventListener('click', (event) => {
+  let element_carousel3 = document.getElementById('carousel');
+  images.push(images.shift());
+  element_carousel3.setAttribute("src", images[0]);
+
+});
