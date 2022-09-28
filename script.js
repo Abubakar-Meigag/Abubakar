@@ -34,58 +34,26 @@ document.getElementById('next').addEventListener('click', (event) => {
 
 });
 
+<p>Enter your <u>earnings</u> with a <mark>positive</mark> number and your <u>expenses</u> with <mark>negative</mark> number
+</p>      
+<ul id="list1"></ul>
+<ul id="list2"></ul>
+
+<input id="number" placeholder="enter your number here"> 
+
+<button id="button">submit </button>
+<hr>
+<button id="btn1">press to find total earnings</button>
+<br>
+<br>
+<button id="btn2">press to find total expenses</button>
+<br>
+<br>
+<button id="btn3">press to find balance</button>
+<br>
+<br>
 
 
 
-var names;
-
-function getNumberOrString(value) {
-  // Convert a string value to a number if possible
-  let number_value = Number(value);
-  if (Number.isNaN(number_value)) {
-    return value
-  } else {
-    return number_value
-  }
-}
-
-function randomInt(n) {
-  // Return a random number from in [0, n[
-  return Math.floor(Math.random()*n);
-}
-
-function randomMember(arr) {
-  // Return a random member of the array
-  return arr[randomInt(arr.length)]
-}
 
 
-names = [];
-let element_list = document.getElementById('list');
-element_list.innerText = names;
-
-
-document.getElementById('button_add').addEventListener('click', (event) => {
-  names.push(getNumberOrString(document.getElementById('text').value));
-  if (!!names.length) {
-    let element_list1 = document.getElementById('list1');
-    let new_ol = document.createElement('ol');
-    new_ol.innerText = getNumberOrString(document.getElementById('text').value);
-
-    element_list1.appendChild(new_ol);
-  }
-
-});
-
-document.getElementById('button1').addEventListener('click', (event) => {
-  if (!!names.length) {
-    let element_list2 = document.getElementById('list');
-    element_list2.innerText = randomMember(names);
-    let element_select = document.getElementById('select');
-    let new_ol2 = document.createElement('ol');
-    new_ol2.innerText = randomMember(names);
-
-    element_select.appendChild(new_ol2);
-  }
-
-});
