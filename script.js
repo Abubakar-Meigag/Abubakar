@@ -37,32 +37,55 @@ document.getElementById('next').addEventListener('click', (event) => {
 
 
 
-var img;
+var names;
+
+function getNumberOrString(value) {
+  // Convert a string value to a number if possible
+  let number_value = Number(value);
+  if (Number.isNaN(number_value)) {
+    return value
+  } else {
+    return number_value
+  }
+}
+
+function randomInt(n) {
+  // Return a random number from in [0, n[
+  return Math.floor(Math.random()*n);
+}
+
+function randomMember(arr) {
+  // Return a random member of the array
+  return arr[randomInt(arr.length)]
+}
 
 
-img = ['https://ied.eu/wp-content/uploads/2018/08/idea.png', 'https://i0.wp.com/tcbassociates.com/wp-content/uploads/2020/07/photo-of-people-doing-handshakes-3183197-scaled.jpg?resize=1132%2C509&ssl=1', 'https://assets.entrepreneur.com/content/3x2/2000/20171215195850-GettyImages-508066399.jpeg?auto=webp&quality=95&crop=16:9&width=675', 'https://www.freshbooks.com/wp-content/uploads/unique-business-ideas-from-around-world.jpg', 'https://media0.giphy.com/media/pxrr47YT7QcLnqhrQe/giphy.gif?cid=ecf05e47v9zanf8cipsvnax8m1acxa39q3y8ev3nu1529r1c&rid=giphy.gif&ct=g'];
-
-let element_pic = document.getElementById('pic');
-img.unshift(img.pop());
-element_pic.setAttribute("src", img[0]);
+names = [];
+let element_list = document.getElementById('list');
+element_list.innerText = names;
 
 
-document.getElementById('previous').addEventListener('click', (event) => {
-  let element_img = document.getElementById('img');
-  let new_img = document.createElement('img');
-  img.unshift(img.pop());
-  new_img.setAttribute("src", img[0]);
+document.getElementById('button_add').addEventListener('click', (event) => {
+  names.push(getNumberOrString(document.getElementById('text').value));
+  if (!!names.length) {
+    let element_list1 = document.getElementById('list1');
+    let new_ol = document.createElement('ol');
+    new_ol.innerText = getNumberOrString(document.getElementById('text').value);
 
-  element_img.appendChild(new_img);
+    element_list1.appendChild(new_ol);
+  }
 
 });
 
-document.getElementById('next').addEventListener('click', (event) => {
-  let element_pic2 = document.getElementById('pic');
-  img.push(img.shift());
-  element_pic2.setAttribute("src", img[0]);
+document.getElementById('button1').addEventListener('click', (event) => {
+  if (!!names.length) {
+    let element_list2 = document.getElementById('list');
+    element_list2.innerText = randomMember(names);
+    let element_select = document.getElementById('select');
+    let new_ol2 = document.createElement('ol');
+    new_ol2.innerText = randomMember(names);
+
+    element_select.appendChild(new_ol2);
+  }
 
 });
-
-
-
